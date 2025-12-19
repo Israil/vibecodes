@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lessons Menu</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #1a1d24;
+        --muted: #5f6b7a;
+        --line: #e4e8f0;
+      }
 
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 16px;
+      }
+
+      .menu {
+        width: min(520px, 100%);
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+        padding: 28px;
+      }
+
+      .menu h1 {
+        font-size: 24px;
+        margin: 0 0 6px;
+        letter-spacing: -0.01em;
+      }
+
+      .menu p {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .lesson-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .lesson-list li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 15px;
+      }
+
+      .lesson-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .lesson-info span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .lesson-duration {
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 12px;
+        color: var(--muted);
+        background: #f9fafc;
+        margin-bottom: 8px;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="menu" aria-label="Lessons menu">
+      <div class="badge">Course · Web Fundamentals</div>
+      <h1>Lessons</h1>
+      <p>Simple, focused lessons to help you learn step by step.</p>
+      <ul class="lesson-list">
+        <li>
+          <div class="lesson-info">
+            HTML Essentials
+            <span>Structure and semantics</span>
+          </div>
+          <div class="lesson-duration">12 min</div>
+        </li>
+        <li>
+          <div class="lesson-info">
+            Clean CSS Basics
+            <span>Layout and spacing</span>
+          </div>
+          <div class="lesson-duration">18 min</div>
+        </li>
+        <li>
+          <div class="lesson-info">
+            Responsive Layouts
+            <span>Flexible design patterns</span>
+          </div>
+          <div class="lesson-duration">20 min</div>
+        </li>
+        <li>
+          <div class="lesson-info">
+            Accessibility Checks
+            <span>Inclusive experiences</span>
+          </div>
+          <div class="lesson-duration">10 min</div>
+        </li>
+        <li>
+          <div class="lesson-info">
+            Publish Your Project
+            <span>Launch and iterate</span>
+          </div>
+          <div class="lesson-duration">14 min</div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
